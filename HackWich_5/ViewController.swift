@@ -9,16 +9,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+@IBOutlet weak var showMovie: UIButton!
+@IBOutlet weak var buttonLabel: UIButton!
 @IBOutlet weak var topLabel: UILabel!
-
 @IBOutlet weak var favoriteMovieLable: UILabel!
-
-
 @IBOutlet weak var secondTopLabel: UILabel!
-    
 @IBOutlet weak var bottomLabel: UILabel!
-    
-    var currentIndex: Int = 0
+
+var currentIndex: Int = 0
+var currentMovieIndex: Int = 0
+
     
 var favoriteFoodsArray: [String] = ["Pizza", "Sushi", "Burgers", "Ice Cream", "Tacos"]
 
@@ -29,27 +29,35 @@ var favoriteFoodsArray: [String] = ["Pizza", "Sushi", "Burgers", "Ice Cream", "T
     }
 
 @IBAction func buttonPressed(_ sender: UIButton) {
-
-if let favoriteFood = favoriteFoodsArray.first {
-        
-bottomLabel.text = favoriteFoodsArray[3]
-        
-    } else {
-
+   
+if currentIndex < favoriteFoodsArray.count {
+               bottomLabel.text = favoriteFoodsArray[currentIndex]
+               buttonLabel.setTitle("Next", for: .normal)
+               currentIndex += 1
+} else {
+               bottomLabel.text = "No More Items"
+               bottomLabel.isEnabled = false
+           }
 }
-    }
-    
+
 //Movies\\
     
-    @IBAction func showButtonPressed(_ sender: UIButton) {
-if let favoriteMovie = favoriteMovieArry.first {
+@IBAction func showButtonPressed(_ sender: UIButton) {
+if currentMovieIndex < favoriteMovieArry.count {
 
-favoriteMovieLable.text = favoriteMovieArry[0]
-            
-} else {
-            
-    }
-        
-    }
+favoriteMovieLable.text = favoriteMovieArry[currentMovieIndex]
+
+    showMovie.setTitle("Next", for: .normal)
+    currentMovieIndex += 1
+}
+    
+  else {
+
+favoriteMovieLable.text = "No More Movies"
+favoriteMovieLable.isEnabled = false
+
+            }
+
+        }
 }
 
