@@ -29,32 +29,52 @@ var favoriteFoodsArray: [String] = ["Pizza", "Sushi", "Burgers", "Ice Cream", "T
     }
 
 @IBAction func buttonPressed(_ sender: UIButton) {
+//This function is triggered when a button is pressed.
    
 if currentIndex < favoriteFoodsArray.count {
-               bottomLabel.text = favoriteFoodsArray[currentIndex]
-               buttonLabel.setTitle("Next", for: .normal)
-               currentIndex += 1
+        //This will count the currentIndex
+        
+bottomLabel.text = favoriteFoodsArray[currentIndex]
+        // Changes the favoriteMovieLable label to the current movie item from the favoriteFoodArry array
+        
+buttonLabel.setTitle("Next", for: .normal)
+        // Sets button name from what it is to "next'
+
+currentIndex += 1
+        // Will display the next movie item on next click
+        
 } else {
-               bottomLabel.text = "No More Items"
-               bottomLabel.isEnabled = false
+
+bottomLabel.text = "No More Items"
+    //If there are no more movies this print will display
+    
+bottomLabel.isEnabled = false
+// Disables the button
            }
 }
 
 //Movies\\
     
 @IBAction func showButtonPressed(_ sender: UIButton) {
+//This function is triggered when a button is pressed.
 if currentMovieIndex < favoriteMovieArry.count {
-
+//This will count the currentMovieIndex
+           
 favoriteMovieLable.text = favoriteMovieArry[currentMovieIndex]
+// Changes the favoriteMovieLable label to the current movie item from the favoriteMovieArry array
 
     showMovie.setTitle("Next", for: .normal)
+// Sets button name from what it is to "next'
     currentMovieIndex += 1
+// Will display the next movie item on next click
 }
     
   else {
 
 favoriteMovieLable.text = "No More Movies"
+//If there are no more movies this print will display
 favoriteMovieLable.isEnabled = false
+// Disables the button
 
             }
 
