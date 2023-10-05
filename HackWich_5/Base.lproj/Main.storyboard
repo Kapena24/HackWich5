@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="fG8-VQ-phQ">
             <objects>
-                <viewController id="lkf-yN-rA6" customClass="ViewController" customModule="HackWich_5" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lkf-yN-rA6" customClass="secondViewController" customModule="HackWich_5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b9o-2p-cWi">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,9 +50,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="jWG-iB-Lhk"/>
                     <connections>
-                        <outlet property="favoriteMovieLable" destination="UbP-Wj-FGW" id="AYg-er-54D"/>
-                        <outlet property="secondTopLabel" destination="iUz-aD-ZOW" id="50q-f3-CC2"/>
-                        <outlet property="showMovie" destination="Gbc-31-C72" id="pLQ-Ev-nLc"/>
+                        <outlet property="favoriteMovieLabel" destination="iUz-aD-ZOW" id="B8m-Ya-vzd"/>
+                        <outlet property="favoriteMoviesShown" destination="UbP-Wj-FGW" id="XPO-pr-qvE"/>
+                        <outlet property="showFavoriteMovies" destination="Gbc-31-C72" id="YQH-4U-UKf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p7N-TJ-lMR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -100,9 +100,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="hsC-yl-DNf"/>
                     <connections>
-                        <outlet property="bottomLabel" destination="47T-gD-vNb" id="BP4-q9-Qhp"/>
-                        <outlet property="buttonLabel" destination="fKh-6U-g0m" id="WuJ-cp-JSi"/>
-                        <outlet property="topLabel" destination="5Am-7H-WFb" id="y6v-zg-ZQY"/>
+                        <outlet property="favoriteFoods" destination="47T-gD-vNb" id="Shz-8f-vew"/>
+                        <outlet property="foodLableTop" destination="5Am-7H-WFb" id="LeV-3H-Fex"/>
+                        <outlet property="showFavoriteFoods" destination="fKh-6U-g0m" id="hdG-0L-JPV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qJJ-L7-Osj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -131,7 +131,7 @@
         <scene sceneID="Jv3-Ir-MK6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YP9-al-KV2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="gaK-mi-S7i"/>
+                    <tabBarItem key="tabBarItem" title="Item 2" image="popcorn.fill" catalog="system" id="gaK-mi-S7i"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="u9K-S2-z50">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -150,7 +150,7 @@
         <scene sceneID="m4G-kP-6JN">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="U8e-Mv-Dd7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="3cO-vx-N7V"/>
+                    <tabBarItem key="tabBarItem" title="Item 1" image="takeoutbag.and.cup.and.straw.fill" catalog="system" id="3cO-vx-N7V"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="D6Q-ff-0Bv">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -167,6 +167,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="popcorn.fill" catalog="system" width="102" height="128"/>
+        <image name="takeoutbag.and.cup.and.straw.fill" catalog="system" width="128" height="109"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
